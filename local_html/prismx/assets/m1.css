@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+    --one: #845EC2;
+    --two: #D65DB1;
+    --three: #FF6F91;
+    --four: #FF9671;
+    --five: #FFC75F;
+}
+
+body {
+    font-family: 'ubuntu', sans-serif;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    print-color-adjust:exact !important;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    z-index: 100;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:valid {
+    border: 1px solid green;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    z-index: 100;
+    filter: blur(10px);
+}
+
+nav > a {
+    width: 75px;
+    height: 50px;
+    float: left;
+    margin-top: 0;
+    margin-left: 20px;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+    background:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)
+        ),
+        linear-gradient(
+            to right,
+            var(--one),
+            var(--three),
+            var(--five)
+        );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+    text-align: center;
+}
+
+nav > a:hover,
+nav > a:active {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    background-size: 0 3px, 100% 3px;
+
+}
+
+nav > p {
+    float: left;
+    margin-top: 0;
+    margin-left: 20px;
+    line-height: 50px;
+    color: white;
+}
+
+p {
+    font-size: 20px;
+}
+
+#footer-title {
+    color: white !important;
+    float: right;
+    margin-right: 20px;
+}
+
+#main-title {
+    font-size: 4vw;
+    position: absolute;
+    transform: translateX(-50%);
+    margin-left: 50%;
+    z-index: 3;
+    top: 40%;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+#sub-title {
+    font-size: 2vw;
+    position: absolute;
+    transform: translateX(-50%);
+    margin-left: 50%;
+    margin-top: 100px;
+    z-index: 3;
+    top: 40%;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.alert {
+    background-color: #F8D7DA;
+    border-color: #F5C6CB;
+    color: #721C24;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-secondary {
+    color: black !important;
+}
+
+.container {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.content {
+    text-align: center;
+}
+
+.fa-rainbow {
+    color: white !important;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.left,
+.right {
+    float: left;
+    margin-top: 100px;
+}
+
+.left {
+    width: 40%;
+    padding-left: 100px;
+}
+
+.left > img {
+    width: 80%;
+    height: 100%;
+    border-radius: 50%;
+    margin: 0 auto !important;
+}
+
+.printable {
+    filter: grayscale(100%);
+    top: 0;
+    left: 0;
+}
+.printable > .container {
+    margin-top: 0;
+}
+
+.right {
+    width: 60%;
+    padding-right: 100px;
+}
+
+.vibrate-1 {
+	-webkit-animation: vibrate-1 0.3s linear both;
+	        animation: vibrate-1 0.3s linear both;
+}
+
+.colorful {
+    background:
+        linear-gradient(
+            90deg,
+            var(--one),
+            var(--two),
+            var(--three),
+            var(--four),
+            var(--five)
+        );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.colorful-moving {
+    --bg-size: 400%;
+    background:
+        linear-gradient(
+            90deg,
+            var(--one),
+            var(--two),
+            var(--three),
+            var(--four),
+            var(--five),
+            var(--four),
+            var(--three),
+            var(--two),
+            var(--one)
+        ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 10s linear infinite;
+}
+
+@keyframes move-bg {
+    to {
+        background-position: var(--bg-size) 0;
+    }
+}
+
+@-webkit-keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+@keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+}
